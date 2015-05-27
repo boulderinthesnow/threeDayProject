@@ -3,39 +3,22 @@
 
 
   $("body").keypress(function(event){
-  	console.log(event.which)
-  	    // if (e.keyCode == 37) { 
-       // getElementById('sound1').play()
-       // return false;
-  	// if ($(".exactCenter").hasClass("animation-target")) {
+  	//console.log(event.which)
+  	$("body").append('<div class= "_' + event.which + '" ></div>')
 
-  	// }
-
-  	//
-$//("#true-center").addClass("load");​
-  	delayAnimate(".exactCenter","animation-spin-right",250,"#clap" )
-  	//dd$(".exactCenter").toggleClass("animation-target")
-  	//$(".exactCenter").addClass("animation-target")
+	 if (event.which === 116) {
+  	delayAnimate("._116","animation-spin-right exactCenter",250,"#clap" )
+  	}
   })
 
   function delayAnimate(targetObj,animateClasses,delay,sound) {
-  	
-  	//$(targetObj).addClass("load");​
-  	$(targetObj).toggleClass(animateClasses)
-  	// $(targetObj)
+  	console.log('<div class="_' + event.which + '" ></div>')
+  	$(targetObj).addClass(animateClasses)
 
   	$(sound)[0].play();
   	window.setTimeout(function(x){
   		$(targetObj).removeClass(animateClasses)
 		}
   		,delay )
-  
   }  
-  // function delayAnimate(targetObj,animateClasses,delay) {
-  // 	$(".exactCenter").toggleClass("animation-target")
-  // 	window.setTimeout(function(x){
-  // 		$(".exactCenter").removeClass("animation-target")
-		// }
-  // 		,250 )
-  
-  // }
+ 
