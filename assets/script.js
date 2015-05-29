@@ -18,6 +18,11 @@ var randomBackground = function(x) {
 	document.body.style.backgroundColor = colors[random];
 }
 
+function giveMeRandom() {
+    var rand = Math.floor(Math.random()*100)+1;
+    return rand;
+};
+
 var randomColor = function(x) {
 	var random = Math.floor(Math.random()*8)
 	return colors[random]
@@ -30,27 +35,65 @@ var randomColor = function(x) {
   	console.log(count);
   	
 
-	if (event.which === 116) {
-  		delayAnimate("._" + count + "_116","animation-spin-right exactCenter hvr-grow",250,"#scifi1" )
+	if (event.which === 97) {
+  		delayAnimate("._" + count + "_97","animation-spin-right exactCenter hvr-grow",250,"#scifi1" )
   	}	
-  	if (event.which === 114) {
-  		delayAnimate("._" + count + "_114","star exactCenterPlaceholder",4000,"#flip","assets/images/decagram.png" )
+  	if (event.which === 102) {
+  		delayAnimate("._" + count + "_102","star exactCenterPlaceholder",4000,"#flip","assets/images/decagram.png" )
   	}
-   	if (event.which === 101) {
-  		delayAnimate("._" + count + "_101","animation-top-down exactCenter ",1000,"#tah" )
+   	if (event.which === 115) {
+  		delayAnimate("._" + count + "_115","animation-top-down exactCenter ",1000,"#tah" )
   	}
-   	if (event.which === 119) {
-  		delayAnimate("._" + count + "_119" ,"right-to-left",2000,"#thump" )
-  		console.log("._" + count + "_119", 2000);
-  	}     	
+   	if (event.which === 100) {
+  		delayAnimate("._" + count + "_100" ,"right-to-left",2000,"#thump" )
+  		console.log("._" + count + "_100", 2000);
+  	}  
+  	//////////////////////////////////////   	
    	if (event.which === 113) {
+   		$("#invader")[0].cloneNode(true).play();
+var keyPressed
 
-		delayAnimate("._" + count + "_113" ,"space-invader ",2000,"#thump" )
-		console.log("._" + count + "_113", 2000);
-			if (event.which === 113){
-	randomLocation(".space-invader", "y", "y")
-  	}  	
-  	}     	
+
+
+$(document).keypress(function(evt) {
+      keyPressed = evt.which;
+      console.log(keyPressed);
+      showMe(keyPressed);
+});
+
+var colors = ["#BCC7DC", "#C2BCDC", "#DCBCD7", "#DCBCBC", "#F6CD83", "#BEF683", "#83F6B9", "#83F6F4"];
+var index = 0;
+
+
+function giveMeRandom() {
+    var rand = Math.floor(Math.random()*100)+1;
+    return rand;
+};
+
+
+function showMe(key) {
+    var keyGiven = "_" + key;
+    var thisAnimation = $("<div class='" + keyGiven + "'></div>")
+    
+             if (keyGiven === "_113") {
+                    thisAnimation.css({
+                        top: giveMeRandom() + "%",
+                        left: giveMeRandom() + "%",
+                        backgroundColor: randomColor()
+                    })//cssAnimation
+                $("body").append(thisAnimation);
+            }//ifStatement
+
+    // $("body").append(thisAnimation);
+        
+        setTimeout(function() {
+                    thisAnimation.remove();
+                }, 1500);
+}//showMe `
+
+
+
+  	}    // end event 113  	
 
 
 
@@ -71,10 +114,14 @@ var randomColor = function(x) {
   // 		top: "50%", 
 		// left: "50%" 
   // 	})
-	if (event.which === 101){
+	if (event.which === 115){
 	randomLocation(".animation-top-down", "n", "y")
-  	}
-
+  	} else if (event.which === "113") {
+                    style.css({
+                        top: giveMeRandom() + "%",
+                        left: giveMeRandom() + "%"
+                    })//cssAnimation
+     }
 
 
   	if (image !== undefined) {
