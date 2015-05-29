@@ -48,7 +48,7 @@ var randomColor = function(x) {
   		delayAnimate("._" + count + "_100" ,"right-to-left",2000,"#thump" )
   		console.log("._" + count + "_100", 2000);
   	}  
-  	//////////////////////////////////////   	
+  	/////////////////////////////////////////////////////////////////////////////////////	
    	if (event.which === 113) {
    		$("#invader")[0].cloneNode(true).play();
 var keyPressed
@@ -94,7 +94,7 @@ function showMe(key) {
 
 
   	}    // end event 113  	
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
   	randomBackground()

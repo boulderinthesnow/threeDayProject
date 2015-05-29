@@ -15,13 +15,12 @@ body {
 
   height:200px; 
   position: absolute;
-/*  top: 50%; 
-  left: 50%; */
   margin-top: -100px; 
   margin-left: -100px; 
   opacity: 1.0;
+  z-index: 0;
 
-  box-shadow:
+/*  box-shadow:
   opacity: 0;
     0 0 0 1em red,
     0 1em 0 1em red,
@@ -52,7 +51,7 @@ body {
     -2em 4em 0 0 red,
     -1em 4em 0 0 red,
     1em 4em 0 0 red,
-    2em 4em 0 0 red;
+    2em 4em 0 0 red;*/
 
     background: blue;
     width: 1em;
@@ -108,56 +107,6 @@ body {
 99% { transform:rotate(720deg) scale(1) }  
 
 }
-
-/*#final-frontier {
-	width: 300%;
-  overflow: auto;
-	height: 100%;
-	position: absolute;
-	float: left;
-	animation-duration: 3s;
-  animation-name: move-space;
-  animation-iteration-count: 1;
-      -webkit-clip-path: circle(800px at 50% 50%);
-  	clip-path: circle(75px at 50% 50%)
-
-}*/
-
-/*@keyframes move-space {
-  0% {
-    margin-top: -100%;
-    margin-left: -100%;
-    width: 300%; 
-     -webkit-clip-path: circle(800px at 50% 50%);
-  	clip-path: circle(75px at 50% 50%)
-  }
-
-   50% {
-    opacity: .75;
-        -webkit-clip-path: circle(800px at 50% 50%);
-  	clip-path: circle(75px at 50% 50%)
-  }
-
-  90% {
-    margin-bottom: 25px;
-    width: 300%;
-    opacity: .35;
-        -webkit-clip-path: circle(800px at 50% 50%);
-  	clip-path: circle(75px at 50% 50%)
-  }
-
-  100% {
-    margin-bottom: 25px;
-    width: 300%;
-    opacity: 0;
-        -webkit-clip-path: circle(800px at 50% 50%);
-  	clip-path: circle(75px at 50% 50%)
-  }
-
-}*/
-
-
-/*#e38d7a*/
 
 
 
@@ -257,27 +206,11 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 
 
-/*.exactCenter.load {
-	opacity: 1
-}	*/
-
-/*@keyframes fadein {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-}
-
-@keyframes fadeout {
-    from { opacity: 1; }
-    to   { opacity: 0; }
-}*/
-
 
 .animation-spin-right {
   -webkit-animation: animation 1000ms linear both;
   animation: animation 1000ms linear both;
 }
-
-/* Generated with Bounce.js. Edit at http://goo.gl/WWyopK */
 
 @-webkit-keyframes animation { 
 
@@ -483,13 +416,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', end
   100% {
   -webkit-transform: scale(.1);
   transform: scale(.1);
+  opacity: 0
   }
 }
 
-/*.hvr-grow2:hover,
-.hvr-grow2:focus,
-.hvr-grow2:active {
-  -webkit-transform: scale(.1);
-  transform: scale(.1);
-}*/
 
