@@ -2,6 +2,13 @@
 // play a sound effect
 // http://www.colorhexa.com/6950d9
 
+
+$("#initialText").append("<h1>Press A, S, D, F or Q</h1>").addClass("title")
+
+setTimeout(function(){
+$("#initialText").remove();
+},6950)
+
 var colors = [
 "#dfb9f0",
 "#c3b9f0",
@@ -152,4 +159,6 @@ function showMe(key) {
 		left: leftR 
   	})
  }
+
+
  
