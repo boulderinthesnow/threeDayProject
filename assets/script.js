@@ -88,7 +88,7 @@ function showMe(key) {
         
         setTimeout(function() {
                     thisAnimation.remove();
-                }, 1500);
+                }, 2000);
 }//showMe `
 
 
